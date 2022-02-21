@@ -1,72 +1,74 @@
 document.addEventListener("DOMContentLoaded", () => {
   const questionsElR = document.querySelector("#questions");
+  const resultEl = document.querySelector(".result");
+  const result = document.querySelector("#result");
 
   let points = [0, 0, 0, 0];
 
   const questions = [
     {
       question: "GENERE",
-      answers: ["Uomo Cis", "Nonbinary", "Donna Cis", "Persona Trans Binaria"],
+      answers: ["Persona Trans Binaria", "Nonbinary", "Uomo Cis", "Donna Cis"],
     },
     {
       question: "COLORE PREFERITO",
       answers: [
-        "Rosso Compagno",
-        "Blu Ciellino",
         "Verde Leghista",
+        "Rosso Compagno",
         "Arancione Sibbino",
+        "Blu Ciellino",
       ],
     },
     {
       question: "ANIMALE PREFERITO",
       answers: [
-        "Cane/Gatto",
         "Rettile a Caso",
         "Un qualche Tipo di Ratto",
         "Animale In Via Di Estinzione",
+        "Cane/Gatto",
       ],
     },
     {
       question: "SESSUALITA’",
       answers: [
-        "Omosessuale",
         "Eterosessuale",
         "Bi/Pan/Ace/Sapiosessuale/etc",
         "Boh?",
+        "Omosessuale",
       ],
     },
     {
       question: "GENERE MUSICALE PREFERITO",
-      answers: ["Rap/Trap", "Rock Pretenzioso", "Pop", "Video ASMR"],
+      answers: ["Rock Pretenzioso", "Video ASMR", "Pop", "Rap/Trap"],
     },
     {
       question: "DOVE VAI IN VACANZA?",
-      answers: ["Mare", "Montagna", "Lago/Fiume/Collina", "Città"],
+      answers: ["Montagna", "Mare", "Città", "Lago/Fiume/Collina"],
     },
     {
       question: "PICK YOUR POISON (STUPID EDITION)",
       answers: [
-        "Pausa Siga ogni 25 minuti",
-        "Fare un Corso di Studi Pseudo-Matematico con dislessia/discalculia",
-        "Fare SDE e Sperare di Trovare Un Lavoro",
         "Discutere con i Ciellini",
+        "Fare SDE e Sperare di Trovare Un Lavoro",
+        "Fare un Corso di Studi Pseudo-Matematico con dislessia/discalculia",
+        "Pausa Siga ogni 25 minuti",
       ],
     },
     {
       question: "PICK YOUR POISON (SERIOUS EDITION)",
       answers: [
-        "La Maria alle 4:20",
-        "Birra a 70 cent del Carrefour",
-        "Vodka Bicentenaria dell’Auletta",
         "Tavernello/Droghe Pesanti",
+        "Birra a 70 cent del Carrefour",
+        "La Maria alle 4:20",
+        "Vodka Bicentenaria dell’Auletta",
       ],
     },
     {
       question: "INDUMENTO PREFERITO DA INDOSSARE IN AULETTA",
       answers: [
+        "Maglietta Galassina",
         "Camicia Stilosa",
         "Ciabatta Ignorante",
-        "Maglietta Galassina",
         "Felpa Nerdina",
       ],
     },
@@ -91,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       question: "CAFFE PREFERITO",
       answers: [
-        "Espresso",
-        "Macchiato/Cappuccino",
         "Cioccolata con 5 di zucchero",
+        "Macchiato/Cappuccino",
+        "Espresso",
         "Caffè da 50cent",
       ],
     },
@@ -126,32 +128,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (
-      points[0] > points[1] &&
-      points[0] > points[2] &&
-      points[0] > points[3]
+      points[0] >= points[1] &&
+      points[0] >= points[2] &&
+      points[0] >= points[3]
     ) {
-      personality = "Biocoso";
+      personality = "Biocos*";
     }
     if (
-      points[1] > points[0] &&
-      points[1] > points[2] &&
-      points[1] > points[3]
+      points[1] >= points[0] &&
+      points[1] >= points[2] &&
+      points[1] >= points[3]
     ) {
-      personality = "Umanistici";
+      personality = "Caso Umanistico";
     }
     if (
-      points[2] > points[0] &&
-      points[2] > points[1] &&
-      points[2] > points[3]
+      points[2] >= points[0] &&
+      points[2] >= points[1] &&
+      points[2] >= points[3]
     ) {
-      personality = "Informatici";
+      personality = "Informatic* Munit* Di Programming Socks";
     }
     if (
-      points[3] > points[0] &&
-      points[3] > points[1] &&
-      points[3] > points[2]
+      points[3] >= points[0] &&
+      points[3] >= points[1] &&
+      points[3] >= points[2]
     ) {
-      personality = "Pseudoscienziati";
+      personality = "Pseudoscienziat*";
     }
+
+    resultEl.classList.add("open");
+    result.innerHTML = personality;
   });
 });
