@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const questionsElR = document.querySelector("#questions");
 
+  let points = [0, 0, 0, 0];
+
   const questions = [
     {
       question: "GENERE",
@@ -29,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       answers: [
         "Omosessuale",
         "Eterosessuale",
-        "Bi/Pan/Ace/etc",
-        "Sapiosessuale",
+        "Bi/Pan/Ace/Sapiosessuale/etc",
+        "Boh?",
       ],
     },
     {
@@ -77,6 +79,24 @@ document.addEventListener("DOMContentLoaded", () => {
         "La Playstation Che Sta Lì Da Un Anno",
       ],
     },
+    {
+      question: "LUOGO DI STUDIO PREFERITO",
+      answers: [
+        "In auletta",
+        "Galleria/Biblioteca",
+        "Casa mia",
+        "Studio? No grazie",
+      ],
+    },
+    {
+      question: "CAFFE PREFERITO",
+      answers: [
+        "Espresso",
+        "Macchiato/Cappuccino",
+        "Cioccolata con 5 di zucchero",
+        "Caffè da 50cent",
+      ],
+    },
   ];
 
   questions.map((question, j) => {
@@ -95,5 +115,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     questionEl.innerHTML = questionHTML;
     questionsElR.appendChild(questionEl);
+  });
+
+  const submitEl = document.querySelector("#submit");
+  submitEl.addEventListener("click", () => {
+    let personality = "";
+    const answers = document.querySelectorAll("input:checked");
+    answers.forEach((a) => {
+      points[a.value]++;
+    });
+
+    if (
+      points[0] > points[1] &&
+      points[0] > points[2] &&
+      points[0] > points[3]
+    ) {
+      personality = "Biocoso";
+    }
+    if (
+      points[1] > points[0] &&
+      points[1] > points[2] &&
+      points[1] > points[3]
+    ) {
+      personality = "Umanistici";
+    }
+    if (
+      points[2] > points[0] &&
+      points[2] > points[1] &&
+      points[2] > points[3]
+    ) {
+      personality = "Informatici";
+    }
+    if (
+      points[3] > points[0] &&
+      points[3] > points[1] &&
+      points[3] > points[2]
+    ) {
+      personality = "Pseudoscienziati";
+    }
   });
 });
