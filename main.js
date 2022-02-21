@@ -25,39 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
         "Rettile a Caso",
         "Un qualche Tipo di Ratto",
         "Animale In Via Di Estinzione",
-        "Cane/Gatto",
+        "Cane / Gatto",
       ],
     },
     {
       question: "SESSUALITA’",
       answers: [
         "Eterosessuale",
-        "Bi/Pan/Ace/Sapiosessuale/etc",
+        "Bi / Pan / Ace / Sapiosessuale / etc",
         "Boh?",
         "Omosessuale",
       ],
     },
     {
       question: "GENERE MUSICALE PREFERITO",
-      answers: ["Rock Pretenzioso", "Video ASMR", "Pop", "Rap/Trap"],
+      answers: ["Rock Pretenzioso", "Video ASMR", "Pop", "Rap / Trap"],
     },
     {
       question: "DOVE VAI IN VACANZA?",
-      answers: ["Montagna", "Mare", "Città", "Lago/Fiume/Collina"],
+      answers: ["Montagna", "Mare", "Città", "Lago / Fiume / Collina"],
     },
     {
       question: "PICK YOUR POISON (STUPID EDITION)",
       answers: [
         "Discutere con i Ciellini",
         "Fare SDE e Sperare di Trovare Un Lavoro",
-        "Fare un Corso di Studi Pseudo-Matematico con dislessia/discalculia",
+        "Fare un Corso di Studi Pseudo-Matematico con dislessia / discalculia",
         "Pausa Siga ogni 25 minuti",
       ],
     },
     {
       question: "PICK YOUR POISON (SERIOUS EDITION)",
       answers: [
-        "Tavernello/Droghe Pesanti",
+        "Tavernello / Droghe Pesanti",
         "Birra a 70 cent del Carrefour",
         "La Maria alle 4:20",
         "Vodka Bicentenaria dell’Auletta",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       question: "LUOGO DI STUDIO PREFERITO",
       answers: [
         "In auletta",
-        "Galleria/Biblioteca",
+        "Galleria / Biblioteca",
         "Casa mia",
         "Studio? No grazie",
       ],
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       question: "CAFFE PREFERITO",
       answers: [
         "Cioccolata con 5 di zucchero",
-        "Macchiato/Cappuccino",
+        "Macchiato / Cappuccino",
         "Espresso",
         "Caffè da 50cent",
       ],
